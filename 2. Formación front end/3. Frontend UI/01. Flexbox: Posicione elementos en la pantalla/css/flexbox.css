@@ -1,0 +1,140 @@
+/* HEADER */
+
+.headerPrincipal .container {
+    display: flex;                  /* Flexbox para que queden uno al lado del otro */
+    align-items: center;            /* Alinea los elementos verticalmente */
+    justify-content: space-between; /* Espacio entre los elementos */
+}
+
+.headerPrincipal-nav {
+    display: flex;
+}
+
+/* FLOATER */
+
+.rodapePrincipal-patrocinadores .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Espacio alrededor los elementos para que queden centrados */
+    width: 70%;                    /* Este contenedor tiene un ancho del 70% es decir 70% de la pantalla, esto sirve para que al crear el espacios entre los elementos, no se queden pegados al borde */
+    margin-right: 5%;              /* Este contenedor tiene un margen derecho del 5% para que Casa di Código no quede pegado a Entre en contacto */
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+}
+
+/* MAPA DE CURSOS */
+
+.rodapePrincipal-navMap-list {
+    display: flex;
+    flex-direction: column; /* Los elementos se colocan uno debajo del otro, solo colocamos esto cuando lo cambiamos  ya que por defecto es row (de lado a lado) */
+    height: 250px;          /* Para que el alto de las columnas lo limite a 250px */
+    flex-wrap: wrap;        /* Cuando llegue a 250px, los elementos se colocan uno al lado del otro */
+}
+
+/* NUESTROS CURSOS */
+
+.contenidoPrincipal-cursos {
+    display: flex;
+    flex-wrap: wrap; /* Cuando llegue a 23% de ancho, los elementos se colocan uno al lado del otro */
+}
+
+.contenidoPrincipal-cursos-link {
+    display: flex;
+    width: 23%; /* Para que los elementos tenga un ancho del 20% y sumados son 100%, colocamos +3% para dejar un poco de espacio */
+}
+
+/* VIDE0  Y VENTAJAS */
+
+.videoSobre .container {
+    display: flex;
+}
+
+.videoSobre-sobre {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.videoSobre-video {
+    flex-grow: 2;   /* flex-grow: Toma el espacio sobrante de los lados y lo divide en la cantidad de secciones que le indiquemos */
+    flex-shrink: 2; /* flex-shrink: Conforme disminuye la pantalla este colocara 2 veces menor el tamaño del video */
+}
+
+.videoSobre-video {
+    flex-grow: 2;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+
+    .headerPrincipal .container {
+        flex-direction: column;
+        align-items: initial; /* Para que los elementos se alineen a la izquierda */
+        text-align: center;   /* Para que el texto se alinee al centro */
+    }
+
+    .headerPrincipal-nav {
+        flex-direction: column;
+    }
+
+    /* NUESTROS CURSOS */
+
+    .contenidoPrincipal-cursos {
+        flex-direction: column;
+    }
+
+    .contenidoPrincipal-cursos-link {
+        width: 100%;
+    }
+
+    /* MAPA DE CURSOS */
+
+    .rodapePrincipal-navMap-list {
+        height: auto;      /* Para que el alto sea auto */
+        flex-wrap: nowrap; /* Para anular el wrap que pusimos arriba */
+    }
+
+    /* FLOATER */
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+    }
+
+    .rodapePrincipal-patrocinadores-list {
+        align-items: center;
+        width: 100%;
+        margin-right: 0; /* Para anular el margen que pusimos arriba */
+    }
+
+    /* ENTRE EN CONTACTO */
+    .rodapePrincipal-contatoForm-fieldset {
+        justify-content: center; /* Para que los elementos se alineen al centro de manera horizontal */
+    }
+
+    /* FLEX ORDER */
+    .headerPrincipal-nav-link-app {
+        order: -1; /* Para que el elemento se coloque primero cuando se coloque en columnas */
+    }
+
+    /* VIDEO Y VENTAJAS */
+    .videoSobre .container {
+        flex-direction: column;
+    }
+
+}
+
+/* APUNTES
+
+- Flexbox lo utilizaremos para los items dentro de un contenedor
+- flex-basis: Sirve para definir un ancho para el elemento en caso de que el flex container esté con flex-direction: row, también sirve para  definir un ancho para el elemento en caso de que el flex container esté con flex-direction: column.
+- flex: 0 0 0 0 (flex-grow, flex-shrink, flex-basis)
+*/

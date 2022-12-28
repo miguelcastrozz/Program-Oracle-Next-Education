@@ -1,0 +1,23 @@
+.banner__titulo {
+    color: #fdfdfd;
+    font-family: Pacifico, cursiva, serif;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.75);
+    transform: translate(-50%, -50%); /* Se distorsiona la imagen en el eje X y Y */
+    top: 50%;
+    width: 100%;
+}
+
+@media screen and (min-width: 0) {
+    .banner__titulo {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 0) {
+    .banner__titulo {
+        font-size: 5.0625rem;
+    }
+}

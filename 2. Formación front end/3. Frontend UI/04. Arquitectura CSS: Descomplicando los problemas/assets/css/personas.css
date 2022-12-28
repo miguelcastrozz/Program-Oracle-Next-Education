@@ -1,0 +1,38 @@
+.persona {
+    display: flex;
+    flex-direction: column;
+}
+
+.personas {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3rem;
+}
+
+@media screen and (min-width: 0) {
+    .persona {
+        margin-bottom: 2rem;
+    }
+}
+
+/* TABLET */
+
+@media screen and (min-width: 768px) {
+    .persona {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 0) {
+    .personas {
+        flex-direction: column;
+    }
+}
+
+/* TABLET */
+
+@media screen and (min-width: 768px) {
+    .personas {
+        flex-direction: row; /* Filas */
+    }
+}

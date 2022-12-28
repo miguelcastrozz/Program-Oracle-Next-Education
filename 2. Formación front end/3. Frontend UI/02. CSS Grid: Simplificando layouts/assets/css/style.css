@@ -1,0 +1,29 @@
+.app {
+    background: #f1f1f1;
+    display: grid;
+    font-family: Arial, Helvetica, sans-serif;
+    grid-template-areas: "header" "contenido" "flooter"; /* Definimos las áreas */
+    grid-template-columns: auto;                         /* Para que el contenido se ajuste al ancho de la pantalla */
+    grid-template-rows: 50px auto auto;                  /* 50px para el encabezado, 100vh para el contenido y auto para el rodapie */
+}
+
+.encabezado {
+    align-items: center;
+    display: flex;
+    grid-area: header;
+    padding: 0 2rem;
+    background: #f1f1f1;
+}
+
+.contenido {
+    grid-area: contenido;
+    padding: 0 2rem;
+}
+
+.rodapie {
+    background: #fdfdfd;
+    color: #333333;
+    grid-area: footer;
+    padding: 1rem;
+    text-align: center;
+}

@@ -1,0 +1,11 @@
+@media screen and (min-width: 0) {
+    .logo {
+        display: none; /* Quita la canasta de frutas */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .logo {
+        display: block; /* Anula el none anterior */
+    }
+}

@@ -1,0 +1,85 @@
+.populares {
+    padding: 3rem 0; /* Espacio entre populares y destacados */
+}
+
+.populares__card {
+    background: #fdfdfd;
+    display: grid;
+    grid-template-areas: "card-imagem" "card-corpo";
+    grid-template-columns: 100%;
+    grid-template-rows: 173px auto;
+    margin-right: 1rem;
+    width: calc(20% - 1rem); /* Para que las columnas ocupen el 20% del ancho total y que haya un margen de 1rem entre ellas */
+}
+
+.populares__card___imagen {
+    grid-area: card-imagem;
+    height: 100%;
+    width: 100%;
+}
+
+.populares__card___base {
+    display: grid;
+    grid-area: card-corpo;
+    grid-row-gap: .5rem;
+    grid-template-areas: "card-header" "card-contenido";
+    grid-template-rows: 50px auto; /* Titulo y descripción */
+    padding: .75rem;               /* Espacio de 0.75rem entre titulo y descripción */
+}
+
+.populares__card___descripcion {
+    color: #333333;
+    line-height: 1.5; /* Espacio entre lineas */
+    margin: 1rem 0;
+    text-align: justify; /* Texto alineado completo (Desde izquierda hasta derecha) */
+}
+
+.populares__contenido {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0rem;
+}
+
+/* ESTILOS */
+
+.populares__card___titulo {
+    color: #333333; /* Color de la letra */
+    font-size: 1.5rem;
+}
+
+.populares__card___data {
+    color: #808080;
+    font-size: .9rem;
+}
+
+.populares__titulo {
+    font-weight: 500;
+}
+
+.populares__icon {
+    margin-right: .25rem;
+}
+
+.populares__header {
+    border-bottom: 1px solid #dcdcdc; /* Borde de 1px y color */
+    display: flex;
+    justify-content: space-between;
+}
+
+.populares__boton {
+    background: transparent;
+    border: none;
+    color: #333333;
+}
+
+.populares__card:last-child { /* Ultima de la lista */
+    margin-right: 0;
+}
+
+/*
+- ↔️Filas ....... Izquierda a derecha
+- ↕️Columnas .... Arriba hacia abajo
+
+- Height: Alto
+- Width: Ancho
+*/

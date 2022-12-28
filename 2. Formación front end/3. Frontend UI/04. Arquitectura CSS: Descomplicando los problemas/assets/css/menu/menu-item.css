@@ -1,0 +1,7 @@
+.menu__item { /* Quita el estilo, en este caso los puntos */
+    list-style: none;
+}
+
+.menu__item:last-child .menu-link { /* last-child selecciona el último elemento */
+    margin-right: 0;
+}
