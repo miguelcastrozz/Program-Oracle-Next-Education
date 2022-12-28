@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contacto - Barbería Alura</title>
+        <link rel = "styleshhet" href = Reset.css>
+        <link rel ="stylesheet" href = "Style.css">
+    </head>
+    <body>
+        <header>
+            <div class = "caja">
+                <h1><img src="../Gallery/logo.png" alt = "Logo de la Barbería Alura"></h1>
+                    <nav>
+                        <ul>
+                            <li><a href ="Index.html">Home</a></li>
+                            <li><a href ="Productos.html">Productos</a></li>
+                            <li><a href ="Contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+            </div>
+        </header>
+        <main>
+            <form>
+                <label for = "nombreyapellido">Nombre y apellido</label>
+                <input type = text id = "nombreyapellido" class = "input-patron" required>
+                <label for = "correoelectronico">Correo electrónico</label>
+                <input type = email id = "correoelectronico" class = "input-patron" required placeholder = "email@dominio.com">
+                <label for = "telefono">Teléfono</label>
+                <input type = tel id = "telefono" class = "input-patron" required placeholder = "(+xx) (xxx xxxxxxx)">
+                <label for = "mensaje">Mensaje</label>
+                <textarea cols = "70", rows = "10" id = "mensaje" class = "input-patron" required></textarea>
+                <fileset>
+                    <legend>¿Cómo le gustaría que lo contactemos?</legend>
+                    <label for = "radio-email"><input type = "radio" name = "contacto" value = "email" id = "radio-email">Email</label>
+                    <label for = "radio-telefono"><input type = "radio" name = "contacto" value = "telefono" id = "radio-telefono">Teléfono</label>
+                    <label for = "radio-whatsapp"><input type = "radio" name = "contacto" value = "whatsapp" id = "radio-whatsapp" checked>WhatsApp</label>
+                </fileset>
+                <fileset>
+                    <lengend>¿En que horario le gustaría ser atendido?</lengend>
+                    <select>
+                        <option>Mañana</option>
+                        <option>Tarde</option>
+                        <option>Noche</option>
+                    </select>
+                </fileset>
+                <label class = "checkbox"><input type = "checkbox" checked>¿Le gustaría recibir novedades de la Barbería Alura?</label>
+                <input type = "submit" value = "Enviar formulario" class = "enviar">
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunes</td>
+                        <td>08h - 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Miercoles</td>
+                        <td>08h - 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>08h - 20h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <footer>
+            <img src = "../Gallery/logo-blanco.png" alt = "Logo de la Barbería Alura">
+            <p class = "copyright">&copy Copyright Barbería Alura - 2020</p>
+        </footer>
+    </body>
+</html>
+
+<!--
+<label>:
+<form>: Para crear formulario
+<input>: Para crear un campo de entrada de datos
+<textarea>: Para crear un campo de texto con una cantidad de columnas y filas
+<radio>: Para crear opciones y en este se acostumbra a colocarle un value también se agrupan con un name para validar solo una opción
+<checkbox>: Para crear una casilla de verificación, como está en ejemplo escrito no es necesario relacionarlo esta es otra manera
+<fileset>: Para que el navegador sepa que thdo lo que le estamos pasando de un grupo pertenecen a la misma monda
+lengend: Son los párrafos normales pero en fileset
+
+<thead>: Para crear el encabezado de la tabla
+<th>: Para crear una columna de la tabla con thead
+<tbody>: Para crear el cuerpo de la tabla
+<table>: Para crear una tabla
+<tr>: Para crear una fila
+<td>: Para crear una columna
+
+required: Para validar que el campo no este vacío
+placeholder: Para ayudar al usuario a escribir en el campo
+checked: Define un campo predeterminada mente y cambia si el usuario lo cambia
+alt: Para agregar una descripción a una imagen
+
+Si los dejamos asi el botón aparecerá después de la opción por eso se cambia
+<label for = "radio-email">Email</label>
+<input type = "radio" name = "contacto" value = "email" id = "radio-email">
+-->

@@ -1,0 +1,92 @@
+header {
+    background: #BBBBBB;
+    padding: 20px 75px; /* Espacio superior e inferior y 0 en laterales */
+}
+
+.caja {
+    with: 940px;        /* Ancho de la caja */
+    position: relative; /* Para que se pueda posicionar */
+    margin: 0 auto;     /* Para centrar la caja */
+}
+
+nav {
+    position: absolute; /* Hasta la esquina */
+    top: 110px;         /* Posicionamos el nav en la parte superior */
+    right: 0px;         /* Ningún espacio en la parte derecha */
+}
+
+nav li {                /* Navegador de la lista */
+    display: inline;    /* Para que los elementos se muestren en linea, por que ocupan solo su espacio */
+    margin: 0 0 0 15px; /* ⬆ ⬅ ⬇ ➡ esto hace un espacio */
+}
+
+nav a {
+    text-transform: uppercase; /* Mayúsculas */
+    color: #000000;            /* Color */
+    font-weight: bold;         /* Negrita */
+    font-size: 22px;           /* Tamaño */
+    text-decoration: none;     /* Sin decoración */
+}
+
+nav a:hover { /* Eventos con mouse */
+    color: #C78C19;
+    text-decoration: underline;
+}
+
+.productos {
+    width: 940px;   /* Para que no se salga de la pantalla */
+    margin: 0 auto; /* Margen de ⬆ ⬇ 0 y laterales automáticamente*/
+    padding: 50px;  /* Espacio entre el banner y los elementos */
+}
+
+.productos li {                         /* Productos de la lista */
+    display: inline-block;              /* Para que cada item se muestre en un bloque cada uno */
+    text-align: center;                 /* Textos en el centro */
+    width: 30%;                         /* Cada elemento ocupa un 30% de la pantalla */
+    vertical-align: top;                /* Alineamos los elementos verticalmente por arriba */
+    margin: 0 1.5%;                     /* Crea margen externo entre los elementos */
+    padding: 30px 20px;                 /* Crea margen interno, ⬆ ➡ */
+    box-sizing: border-box;             /* Para que libere el espacio entre los elementos */
+    border: 2px solid #000000;          /* Ancho, estilo, color */
+    border-radius: 10px 10px 10px 10px; /* ↖ ↗ ↘ ↙ */
+}
+
+.productos li:hover {
+    border-color: #C78C19;
+    font-size: 33px;
+}
+
+.productos li:active { /* Click con mouse */
+    border-color: #088C19;
+}
+
+.productos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2 { /* Cuando se posicione en un elemento se le aplicara al h2 */
+    font-size: 33px;
+}
+
+.producto-description {
+    font-size: 18px;
+}
+
+.producto-precio {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px; /* Espacio entre el precio y la descripción */
+}
+
+footer {
+    text-align: center;
+    background: url(Imágenes/bg.jpg);
+    padding: 40px; /* Espacio entre inicio de footer hasta inicio de imagen */
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 15px;
+    margin: 20px; /* Espacio entre el copyright y el final de la página */
+}

@@ -1,0 +1,23 @@
+body {
+    background: #CCCCCC
+}
+
+#banner {
+    with: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+#misión {
+    font-size: 20px
+}
+
+em strong {
+    color: red
+}
