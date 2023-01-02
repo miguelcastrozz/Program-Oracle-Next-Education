@@ -7,4 +7,6 @@ public class Cliente {
     String documento;
     String telefono;
 
+    public static final String DIA_LUNES = "lunes";
+
 }
