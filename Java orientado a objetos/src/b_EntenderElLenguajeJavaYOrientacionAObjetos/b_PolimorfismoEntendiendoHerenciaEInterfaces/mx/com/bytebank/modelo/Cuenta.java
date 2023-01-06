@@ -1,4 +1,4 @@
-package b_EntenderElLenguajeJavaYOrientacionAObjetos.b_PolimorfismoEntendiendoHerenciaEInterfaces;
+package b_EntenderElLenguajeJavaYOrientacionAObjetos.b_PolimorfismoEntendiendoHerenciaEInterfaces.mx.com.bytebank.modelo;
 
 public abstract class Cuenta {
 
@@ -74,6 +74,17 @@ public abstract class Cuenta {
 
     public static int getTotal() {
         return Cuenta.total;
+    }
+
+    public boolean esIgual(Cuenta cuenta) {
+        return this.agencia == cuenta.getAgencia() && this.numero == cuenta.getNumero();
+    }
+
+    @Override // Sobre escribir el método equals de la clase Object
+    public boolean equals(Object obj) {
+        // Basada en valores
+        Cuenta cuenta = (Cuenta) obj; /* El objeto que recibe el método es un Object, por lo que hay que hacer un casting a Cuenta, o sea que obj ahora es una Cuenta */
+        return this.agencia == cuenta.getAgencia() && this.numero == cuenta.getNumero();
     }
 
 }

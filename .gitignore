@@ -7,6 +7,7 @@
 .idea
 *.iml
 out
+/out/
 
 # Visual Studio Code
 

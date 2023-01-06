@@ -3,7 +3,9 @@ package b_EntenderElLenguajeJavaYOrientacionAObjetos.c_ExcepcionesAprendaACrearL
 public class main {
 
     public static void main(String[] args) throws Exception { /* Puede lanzar cualquier excepción en caso el método close() de la clase Connection lance una excepción */
+
         System.out.println("Inicio main");
+
         try {
             method1();
         } catch (Exception e) { // Atrapa cualquier excepción
@@ -32,6 +34,7 @@ public class main {
         } catch (IllegalStateException e) {
             e.printStackTrace();
         }
+
     }
 
     private static void method1() {
