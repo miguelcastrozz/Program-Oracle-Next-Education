@@ -1,0 +1,12 @@
+{
+  "name": "pupularbankaccounts",
+  "version": "1.0.0",
+  "description": "Manager of currents accounts of the popular bank",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Course ONE",
+  "license": "ISC",
+  "type": "module"
+}

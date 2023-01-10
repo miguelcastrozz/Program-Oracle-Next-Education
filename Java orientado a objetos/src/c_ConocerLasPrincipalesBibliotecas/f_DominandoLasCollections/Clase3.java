@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+// TODO: Arreglar clases
 public class Clase3 {
 
     public static final List<List<Integer>> listas = new ArrayList<List<Integer>>() {
@@ -42,12 +43,12 @@ public class Clase3 {
         }
 
         Curso2 curso1 = new Curso2("Java", 30);
-        curso1.addAula(new Aula("List"));
-        curso1.addAula(new Aula("ArrayList"));
-        curso1.addAula(new Aula("LinkedList"));
-        curso1.addAula(new Aula("Inmutable"));
+//        curso1.addAula(new Aula("List"));
+//        curso1.addAula(new Aula("ArrayList"));
+//        curso1.addAula(new Aula("LinkedList"));
+//        curso1.addAula(new Aula("Inmutable"));
 
-        List<Aula> aulaList = curso1.getAulaList();
+//        List<Aula> aulaList = curso1.getAulaList();
 
         ArrayList<Curso2> cursos = new ArrayList<>();
         cursos.add(curso1);
@@ -98,9 +99,9 @@ class Curso2 {
     }
 
     // La lista obtenida es inmutable
-    public List<Aula> getAulaList() {
-        return Collections.unmodifiableList(aulaList);
-    }
+//    public List<Aula> getAulaList() {
+//        return Collections.unmodifiableList(aulaList);
+//    }
 
     public void setAulaList(List<Clase3> claseList) {
         this.claseList = claseList;

@@ -12,3 +12,9 @@ out
 # Visual Studio Code
 
 .vscode
+
+/target/
+.classpath
+.mvn/
+.settings/
+.project
