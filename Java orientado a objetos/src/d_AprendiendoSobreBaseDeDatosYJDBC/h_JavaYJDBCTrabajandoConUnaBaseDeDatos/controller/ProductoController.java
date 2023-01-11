@@ -1,9 +1,6 @@
 package d_AprendiendoSobreBaseDeDatosYJDBC.h_JavaYJDBCTrabajandoConUnaBaseDeDatos.controller;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +24,7 @@ public class ProductoController {
 		Statement statement = connection.createStatement();
 		boolean resultado = statement.execute("SELECT ID, NOMBRE, DESCRIPCION, CANTIDAD FROM PRODUCTO"); /*
 		Listado = true, Modificar = false, Eliminar = false */
+		ResultSet resultSet = statement.getResultSet();
 		System.out.println(resultado);
 
 		connection.close();

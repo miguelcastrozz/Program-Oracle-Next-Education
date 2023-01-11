@@ -6,14 +6,14 @@ export class AccountStream {
     number;
     #balance;
     agency;
+    static amountAccounts = 0; /* Este atributo es estático, por lo que se puede acceder a él sin necesidad de instanciar la clase */
 
     constructor(client, number, balance, agency) {
-        this.#client = null;
-        this.#balance = balance || 0;
-        this._client = client;
-        this._number = number;
-        this._balance = balance;
-        this._agency = agency;
+        this.#client = client;
+        this.number = number;
+        this.#balance = balance;
+        this.agency = agency;
+        AccountStream.amountAccounts++;
     }
 
     depositAccount(value) {

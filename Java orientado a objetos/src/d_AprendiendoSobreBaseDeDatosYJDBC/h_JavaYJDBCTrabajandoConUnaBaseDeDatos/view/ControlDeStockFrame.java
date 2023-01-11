@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import java.util.Optional;
 
 import javax.swing.JButton;
@@ -46,6 +47,7 @@ public class ControlDeStockFrame extends JFrame {
         configurarAccionesDelFormulario();
 
     }
+
     private void configurarTablaDeContenido(Container container) {
 
         tabla = new JTable();
@@ -76,6 +78,7 @@ public class ControlDeStockFrame extends JFrame {
         setLocationRelativeTo(null);
 
     }
+
     private void configurarCamposDelFormulario(Container container) {
 
         labelNombre = new JLabel("Nombre del Producto");
@@ -122,6 +125,7 @@ public class ControlDeStockFrame extends JFrame {
         container.add(botonLimpiar);
 
     }
+
     private void configurarAccionesDelFormulario() {
 
         botonGuardar.addActionListener(new ActionListener() {
@@ -211,7 +215,11 @@ public class ControlDeStockFrame extends JFrame {
     }
 
     private void cargarTabla() {
-        var productos = this.productoController.listar();
+        try {
+            var productos = this.productoController.listar();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         try {
         } catch (Exception e) {
             throw e;
