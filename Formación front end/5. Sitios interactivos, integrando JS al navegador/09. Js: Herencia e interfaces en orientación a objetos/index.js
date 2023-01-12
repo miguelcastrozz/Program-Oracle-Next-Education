@@ -1,12 +1,19 @@
-import {Cliente} from "./Cliente.js"
-import {CuentaCorriente} from "./CuentaCorriente.js";
-import {CuentaAhorro} from "./CuentaAhorro.js";
+import {Empleado} from "./Empleados/Empleado.js";
+import {Gerente} from "./Empleados/Gerente.js";
+import {Director} from "./Empleados/Director.js";
+import {SistemaAutenticacion} from "./SistemaAutenticacion.js";
 
-const cliente1 = new Cliente("Leonardo","13804050","123224");
-const cliente2 = new Cliente("María","16979808","8989");
+const empleado = new Empleado("Juan", "12345679", 10000);
+empleado.asignarClave(123);
+const gerente = new Gerente("Monica", "987654123", 12000);
+gerente.asignarClave(456);
+const director = new Director("Pedro", "159357536", 15000);
+director.asignarClave(789);
 
-const cuentaCorrienteLeonardo = new CuentaCorriente(cliente1, "1", "001");
-const cuentaCorrienteMaria = new CuentaCorriente(cliente2,"2","002");
+console.log(empleado.verBonificacion());
+console.log(gerente.verBonificacion());
+console.log(director.verBonificacion());
 
-const cuentaAhorroLeonardo = new CuentaAhorro(cliente1,0,"9985", "001");
-console.log(cuentaAhorroLeonardo);
+console.log(SistemaAutenticacion.login(empleado, 123));
+console.log(SistemaAutenticacion.login(gerente, 456));
+console.log(SistemaAutenticacion.login(director, 999));
